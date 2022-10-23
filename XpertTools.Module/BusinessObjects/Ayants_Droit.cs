@@ -101,15 +101,8 @@ namespace XpertTools.Module.BusinessObjects
         }
         protected override void OnSaving()
         {
-            if (this.Session.IsNewObject(this))
-            {
-                Porteur_Carte porteur_Carte = new Porteur_Carte(this.Session)
-                {
-                    Num_Carte_Identite = Num_Assure,
-                    Nom_Prenom = Nom + " " + Prenom,
-                };
-            }
             base.OnSaving();
+          
         }
     }
 }
