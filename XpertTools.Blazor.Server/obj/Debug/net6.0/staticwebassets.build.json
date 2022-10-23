@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "53Q2cu/geigEKchNwwHHn8Apu/pOqKVnHyTZn0PPlx4=",
+  "Hash": "1iEQtOvnbBDDUdseK/g7kLzPkPqcTFjUMdUaXPhMWtM=",
   "Source": "XpertTools.Blazor.Server",
   "BasePath": "_content/XpertTools.Blazor.Server",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "XpertTools.Blazor.Server\\wwwroot",
       "Source": "XpertTools.Blazor.Server",
-      "ContentRoot": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
+      "ContentRoot": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
       "BasePath": "_content/XpertTools.Blazor.Server",
       "Pattern": "**"
     }
@@ -3434,10 +3434,10 @@
       "OriginalItemSpec": "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages\\devexpress.expressapp.dashboards.blazor\\22.1.3\\staticwebassets\\xaf-blazor-dashboard.js"
     },
     {
-      "Identity": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\css\\site.css",
       "SourceId": "XpertTools.Blazor.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
+      "ContentRoot": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
       "BasePath": "_content/XpertTools.Blazor.Server",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -3451,10 +3451,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\favicon.ico",
       "SourceId": "XpertTools.Blazor.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
+      "ContentRoot": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
       "BasePath": "_content/XpertTools.Blazor.Server",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -3468,10 +3468,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\images\\Logo.svg",
+      "Identity": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\images\\Logo.svg",
       "SourceId": "XpertTools.Blazor.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
+      "ContentRoot": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
       "BasePath": "_content/XpertTools.Blazor.Server",
       "RelativePath": "images/Logo.svg",
       "AssetKind": "All",
@@ -3485,10 +3485,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Logo.svg"
     },
     {
-      "Identity": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\images\\SplashScreen.svg",
+      "Identity": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\images\\SplashScreen.svg",
       "SourceId": "XpertTools.Blazor.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
+      "ContentRoot": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\wwwroot\\",
       "BasePath": "_content/XpertTools.Blazor.Server",
       "RelativePath": "images/SplashScreen.svg",
       "AssetKind": "All",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "duvp7W5pVavY3DkIsph/yHAIPtoqE5WAbDE96W1Ug7eMA7tbU+9so5d1Xt1h5ExzRf2kFQCt7lkllusd7fd1wQ==",
+  "dgSpecHash": "fQ/ipGUhIw/v+rh8Gb6XRGBH5ha8NrBEIYnG7o8ojkuPmSHjTNeWwcxiyGcd8A9XA2t+WpkXj2QKUzgUVkylJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xpertsoft\\source\\repos\\XpertTools\\XpertTools.Blazor.Server\\XpertTools.Blazor.Server.csproj",
+  "projectFilePath": "D:\\Github\\XpertTools\\XpertTools.Blazor.Server\\XpertTools.Blazor.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages\\devexpress.aspnetcore.common\\22.1.3\\devexpress.aspnetcore.common.22.1.3.nupkg.sha512",
     "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages\\devexpress.aspnetcore.core\\22.1.3\\devexpress.aspnetcore.core.22.1.3.nupkg.sha512",

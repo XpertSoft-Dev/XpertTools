@@ -61,7 +61,34 @@ public class Updater : ModuleUpdater {
         }
         adminRole.IsAdministrative = true;
 		userAdmin.Roles.Add(adminRole);
+
+        Create_Lien_Parente();
+
+
+
         ObjectSpace.CommitChanges(); //This line persists created object(s).
+    }
+
+
+    public void Create_Lien_Parente()
+    {
+        DevExpress.Xpo.Session session = ((XPObjectSpace)ObjectSpace).Session;
+
+        int tt = ObjectSpace.GetObjectsCount(typeof(Lien_Parente),null) ;
+        if ( tt == 0)
+        {
+            Lien_Parente LP; 
+            LP = new Lien_Parente(session);
+            LP.Rang_Designation = "Enfant";
+
+            LP = new Lien_Parente(session);
+            LP.Rang_Designation = "Conjoint";
+
+            LP = new Lien_Parente(session);
+            LP.Rang_Designation = "Ascendant";
+            
+        }
+        
     }
     public override void UpdateDatabaseBeforeUpdateSchema() {
         base.UpdateDatabaseBeforeUpdateSchema();
