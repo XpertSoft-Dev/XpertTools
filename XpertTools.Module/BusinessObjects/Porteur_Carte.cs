@@ -28,6 +28,7 @@ namespace XpertTools.Module.BusinessObjects
             base.AfterConstruction();
         }
 
+        string num_Origin;
         string num_Carte_Identite;
         string nom_Prenom;
 
@@ -37,6 +38,15 @@ namespace XpertTools.Module.BusinessObjects
             get => num_Carte_Identite;
             set => SetPropertyValue(nameof(Num_Carte_Identite), ref num_Carte_Identite, value);
         }
+        
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        [Browsable(false)]
+        public string Num_Origin
+        {
+            get => num_Origin;
+            set => SetPropertyValue(nameof(Num_Origin), ref num_Origin, value);
+        }
+
         [XafDisplayName("Nom et Prénom")]
         public string Nom_Prenom
         {

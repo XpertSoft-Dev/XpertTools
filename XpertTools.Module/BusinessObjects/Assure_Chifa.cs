@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using XpertTools.Module.BusinessObjects.Interfaces;
 
 namespace XpertTools.Module.BusinessObjects
 {
@@ -23,7 +24,7 @@ namespace XpertTools.Module.BusinessObjects
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class Assure_Chifa : XpertCustomObject
+    public class Assure_Chifa : XpertCustomObject, IAssure_AyantDroit
     { 
         public Assure_Chifa(Session session)
             : base(session)
@@ -87,15 +88,11 @@ namespace XpertTools.Module.BusinessObjects
         }
 
         [XafDisplayName("Carte")]
+        [RuleRequiredField]
         public Carte_Chifa Carte_Chifa
         {
             get => carte_Chifa;
             set => SetPropertyValue(nameof(Carte_Chifa), ref carte_Chifa, value);
-        }
-
-        protected override void OnSaving()
-        {
-            base.OnSaving();
         }
     }
     public enum Type_Maladie

@@ -11,13 +11,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using XpertTools.Module.BusinessObjects.Interfaces;
 
 namespace XpertTools.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [XafDisplayName("Ayants Droit")]
     [XafDefaultProperty(nameof(Num_Assure))]
-    public class Ayants_Droit : XpertCustomObject
+    public class Ayants_Droit : XpertCustomObject, IAssure_AyantDroit
     {
         public Ayants_Droit(Session session)
              : base(session)
@@ -46,7 +47,6 @@ namespace XpertTools.Module.BusinessObjects
         }
 
         [XafDisplayName("N° Assuré")]
-        [RuleRequiredField]
         public string Num_Assure
         {
             get => num_Assure;

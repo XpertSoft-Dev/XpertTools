@@ -10,15 +10,3 @@ C:\Users\xpertsoft\source\repos\XpertTools\XpertTools.Module\obj\Debug\net6.0\Xp
 C:\Users\xpertsoft\source\repos\XpertTools\XpertTools.Module\obj\Debug\net6.0\refint\XpertTools.Module.dll
 C:\Users\xpertsoft\source\repos\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.pdb
 C:\Users\xpertsoft\source\repos\XpertTools\XpertTools.Module\obj\Debug\net6.0\ref\XpertTools.Module.dll
-D:\Github\XpertTools\XpertTools.Module\bin\Debug\net6.0\XpertTools.Module.deps.json
-D:\Github\XpertTools\XpertTools.Module\bin\Debug\net6.0\XpertTools.Module.dll
-D:\Github\XpertTools\XpertTools.Module\bin\Debug\net6.0\XpertTools.Module.pdb
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.csproj.AssemblyReference.cache
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.GeneratedMSBuildEditorConfig.editorconfig
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.AssemblyInfoInputs.cache
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.AssemblyInfo.cs
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.csproj.CoreCompileInputs.cache
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.dll
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\refint\XpertTools.Module.dll
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\XpertTools.Module.pdb
-D:\Github\XpertTools\XpertTools.Module\obj\Debug\net6.0\ref\XpertTools.Module.dll
