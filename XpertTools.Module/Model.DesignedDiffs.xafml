@@ -65,7 +65,8 @@
     <ListView Id="Assure_Chifa_LookupListView">
       <Columns>
         <ColumnInfo Id="Nom" PropertyName="Nom" Index="0" Width="107" IsNewNode="True" />
-        <ColumnInfo Id="Prenom" PropertyName="Prenom" Index="1" Width="200" IsNewNode="True" />
+        <ColumnInfo Id="Num_Assure" Width="306" />
+        <ColumnInfo Id="Prenom" PropertyName="Prenom" Index="1" Width="156" IsNewNode="True" />
       </Columns>
     </ListView>
     <DetailView Id="Ayants_Droit_DetailView">
@@ -99,6 +100,12 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Ayants_Droit_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Nom" PropertyName="Nom" Index="1" Width="83" IsNewNode="True" />
+        <ColumnInfo Id="Prenom" PropertyName="Prenom" Index="2" Width="92" IsNewNode="True" />
+      </Columns>
+    </ListView>
     <DetailView Id="Carte_Chifa_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -164,6 +171,13 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Mouvement_Carte_ListView">
+      <Columns>
+        <ColumnInfo Id="Porteur_Carte" Width="185" />
+        <ColumnInfo Id="CreatedOn" Index="4" Width="108" />
+        <ColumnInfo Id="CreatedBy" Index="5" Width="99" />
+      </Columns>
+    </ListView>
     <ListView Id="Mouvement_Carte_LookupListView">
       <Columns>
         <ColumnInfo Id="Porteur_Carte.Nom_Prenom" Index="-1" />

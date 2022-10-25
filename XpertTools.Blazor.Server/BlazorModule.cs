@@ -30,7 +30,6 @@ public sealed class XpertToolsBlazorModule : ModuleBase {
     }
     public override void Setup(XafApplication application) {
         base.Setup(application);
-        //application.CreateCustomModelDifferenceStore += Application_CreateCustomModelDifferenceStore;
         application.CreateCustomUserModelDifferenceStore += Application_CreateCustomUserModelDifferenceStore;
     }
 }

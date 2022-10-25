@@ -47,7 +47,26 @@ namespace XpertTools.Module.BusinessObjects
         public Assure_Chifa Assure_Chifa
         {
             get => assure_Chifa;
-            set => SetPropertyValue(nameof(Assure_Chifa), ref assure_Chifa, value);
+            set
+            {
+                if (assure_Chifa == value)
+                    return;
+
+                // Store a reference to the former owner.
+                Assure_Chifa prevObject = assure_Chifa;
+                assure_Chifa = value;
+
+                if (IsLoading) return;
+
+                // Remove an owner's reference to this building, if exists.
+                if (prevObject != null && prevObject.Carte_Chifa == this)
+                    prevObject.Carte_Chifa = null;
+
+                // Specify that the building is a new owner's house.
+                if (assure_Chifa != null)
+                    Assure_Chifa.Carte_Chifa = this;
+                OnChanged(nameof(Assure_Chifa));
+            }
         }
 
        

@@ -29,3 +29,8 @@ app {
     height: 100%;
     z-index: 100001;
 }
+
+.search-editor .xaf-dx-button-image {
+    mask: url(IImageService/Action_Search) !important;
+    -webkit-mask: url(IImageService/Action_Search) !important;
+}

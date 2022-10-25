@@ -17,7 +17,7 @@ namespace XpertTools.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [XafDisplayName("Assuré")]
-    [XafDefaultProperty(nameof(Num_Assure))]
+    [XafDefaultProperty(nameof(Nom_Complet))]
 
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
@@ -72,7 +72,7 @@ namespace XpertTools.Module.BusinessObjects
         [XafDisplayName("Nom et Prénom")]
         public string Nom_Complet
         {
-            get => Nom + " " + Prenom;
+            get =>  Num_Assure + " " + Nom + " " + Prenom ;
         }
         public string Adresse
         {
@@ -88,11 +88,29 @@ namespace XpertTools.Module.BusinessObjects
         }
 
         [XafDisplayName("Carte")]
-        [RuleRequiredField]
         public Carte_Chifa Carte_Chifa
         {
             get => carte_Chifa;
-            set => SetPropertyValue(nameof(Carte_Chifa), ref carte_Chifa, value);
+            set
+            {
+                if (carte_Chifa == value)
+                    return;
+
+                // Store a reference to the former owner.
+                Carte_Chifa prevObject = carte_Chifa;
+                carte_Chifa = value;
+
+                if (IsLoading) return;
+
+                // Remove an owner's reference to this building, if exists.
+                if (prevObject != null && prevObject.Assure_Chifa == this)
+                    prevObject.Assure_Chifa = null;
+
+                // Specify that the building is a new owner's house.
+                if (carte_Chifa != null)
+                    Carte_Chifa.Assure_Chifa = this;
+                OnChanged(nameof(Carte_Chifa));
+            }
         }
     }
     public enum Type_Maladie
