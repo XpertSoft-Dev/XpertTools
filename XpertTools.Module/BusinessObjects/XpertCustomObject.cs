@@ -55,7 +55,7 @@ namespace XpertTools.Module.BusinessObjects
             set => SetPropertyValue(nameof(ModifiedBy), ref modifiedBy, value);
         }
 
-        [ModelDefault("DisplayFormat", "{dd/MM/yyyy HH:mm:ss.SSS}")]
+        [ModelDefault("DisplayFormat", "{dd/MM/yyyy HH:mm:ss}")]
         [XafDisplayName("Date Création")]
         [VisibleInDetailView(false)]
         public DateTime CreatedOn
