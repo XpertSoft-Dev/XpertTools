@@ -364,3 +364,6 @@ FodyWeavers.xsd
 *.cache
 XpertTools.Win/App.config
 *.config
+.vs/XpertTools/v17/.suo
+XpertTools.Blazor.Server/obj/Debug/net6.0/XpertTools.Blazor.Server.assets.cache
+XpertTools.Module/obj/Debug/net6.0/XpertTools.Module.assets.cache
