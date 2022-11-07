@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 *.cache
 XpertTools.Win/App.config
+*.config
