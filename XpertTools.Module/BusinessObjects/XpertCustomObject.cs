@@ -1,4 +1,5 @@
-﻿using DevExpress.ExpressApp;
+﻿
+using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
@@ -55,7 +56,6 @@ namespace XpertTools.Module.BusinessObjects
             set => SetPropertyValue(nameof(ModifiedBy), ref modifiedBy, value);
         }
 
-        [ModelDefault("DisplayFormat", "{dd/MM/yyyy HH:mm:ss}")]
         [XafDisplayName("Date Création")]
         [VisibleInDetailView(false)]
         public DateTime CreatedOn
@@ -64,7 +64,6 @@ namespace XpertTools.Module.BusinessObjects
             set => SetPropertyValue(nameof(CreatedOn), ref createdOn, value);
         }
 
-        [ModelDefault("DisplayFormat", "{dd/MM/yyyy HH:mm:ss}")]
         [XafDisplayName("Date Modification")]
         [VisibleInDetailView(false)]
         public DateTime ModifiedOn
