@@ -72,7 +72,7 @@ namespace XpertTools.Module.BusinessObjects
         [XafDisplayName("Nom et Prénom")]
         public string Nom_Complet
         {
-            get =>  Num_Assure + " " + Nom + " " + Prenom ;
+            get => Num_Assure + " " + Nom + " " + Prenom;
         }
         public string Adresse
         {
@@ -107,11 +107,16 @@ namespace XpertTools.Module.BusinessObjects
                     prevObject.Assure_Chifa = null;
 
                 // Specify that the building is a new owner's house.
-                if (carte_Chifa != null)
+                if (Carte_Chifa != null)
                     Carte_Chifa.Assure_Chifa = this;
+
+                if (Carte_Chifa as Carte_Chifa == null)
+                    this.Carte_Chifa = null;
+
                 OnChanged(nameof(Carte_Chifa));
             }
         }
+
     }
     public enum Type_Maladie
     {

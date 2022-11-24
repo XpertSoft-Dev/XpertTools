@@ -11,12 +11,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using XpertTools.Module.Controllers;
 
 namespace XpertTools.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [XafDisplayName("Mouvement Carte")]
     [XafDefaultProperty(nameof(Porteur_Carte))]
+
+    //[RuleCriteria("RuleCriteria Password", DefaultContexts.Save,
+    //"[Validated] = True", SkipNullOrEmptyValues = false)]
     public class Mouvement_Carte : XpertCustomObject
     { 
         public Mouvement_Carte(Session session)
@@ -26,8 +30,11 @@ namespace XpertTools.Module.BusinessObjects
         public override void AfterConstruction()
         {
             base.AfterConstruction();
+            Validated = true;
         }
 
+        bool validated;
+        bool sortieGenerated;
         Type_Mouvement type_Mouvement;
         Porteur_Carte porteur_Carte;
         Carte_Chifa carte;
@@ -54,12 +61,32 @@ namespace XpertTools.Module.BusinessObjects
             set => SetPropertyValue(nameof(Type_Mouvement), ref type_Mouvement, value);
         }
 
+        [Browsable(false)]
+        public bool SortieGenerated
+        {
+            get => sortieGenerated;
+            set => SetPropertyValue(nameof(SortieGenerated), ref sortieGenerated, value);
+        }
 
         [XafDisplayName("Date")]
         public DateTime Date_Mouvement
         {
             get => date_Mouvement;
             set => SetPropertyValue(nameof(Date_Mouvement), ref date_Mouvement, value);
+        }
+
+        [VisibleInDashboards(false),VisibleInListView(false), VisibleInLookupListView(false),VisibleInDetailView(false)]        
+        public bool Validated
+        {
+            get => validated;
+            set => SetPropertyValue(nameof(Validated), ref validated, value);
+        }
+
+        
+        protected override void OnSaving()
+        {
+            
+            base.OnSaving();
         }
     }
     public enum Type_Mouvement

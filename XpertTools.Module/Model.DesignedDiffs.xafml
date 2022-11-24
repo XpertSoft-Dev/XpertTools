@@ -34,6 +34,11 @@
     <SchemaModule Name="CloneObjectModule" Version="22.1.3.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="22.1.3.0" IsNewNode="True" />
   </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleCriteria Id="RuleCriteria Password" Criteria="[Validated] = True" />
+    </Rules>
+  </Validation>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
     <DetailView Id="Assure_Chifa_DetailView">
@@ -65,7 +70,6 @@
     <ListView Id="Assure_Chifa_LookupListView">
       <Columns>
         <ColumnInfo Id="Nom" PropertyName="Nom" Index="0" Width="107" IsNewNode="True" />
-        <ColumnInfo Id="Num_Assure" Width="306" />
         <ColumnInfo Id="Prenom" PropertyName="Prenom" Index="1" Width="156" IsNewNode="True" />
       </Columns>
     </ListView>

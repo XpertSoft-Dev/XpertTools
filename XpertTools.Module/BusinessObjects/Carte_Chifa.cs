@@ -17,11 +17,6 @@ namespace XpertTools.Module.BusinessObjects
     [DefaultClassOptions]
     [XafDisplayName("Carte")]
     [XafDefaultProperty(nameof(Num_Carte))]
-    //[ImageName("BO_Contact")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
     public class Carte_Chifa : XpertCustomObject
     { 
         public Carte_Chifa(Session session)
@@ -65,7 +60,12 @@ namespace XpertTools.Module.BusinessObjects
                 // Specify that the building is a new owner's house.
                 if (assure_Chifa != null)
                     Assure_Chifa.Carte_Chifa = this;
+                
+                if (this.Assure_Chifa as Assure_Chifa == null)
+                    this.Assure_Chifa = null;
+
                 OnChanged(nameof(Assure_Chifa));
+
             }
         }
 

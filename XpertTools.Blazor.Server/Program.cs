@@ -1,9 +1,11 @@
 ﻿using System.Reflection;
+using System.Reflection.PortableExecutable;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Blazor.DesignTime;
 using DevExpress.ExpressApp.Blazor.Services;
 using DevExpress.ExpressApp.Design;
 using DevExpress.ExpressApp.Utils;
+using Microsoft.Extensions.Hosting;
 
 namespace XpertTools.Blazor.Server;
 
@@ -30,21 +32,25 @@ public class Program : IDesignTimeApplicationFactory {
             if(ContainsArgument(args, "updateDatabase")) {
                 using(var serviceScope = host.Services.CreateScope()) {
                     return serviceScope.ServiceProvider.GetRequiredService<DevExpress.ExpressApp.Utils.IDBUpdater>().Update(ContainsArgument(args, "forceUpdate"), ContainsArgument(args, "silent"));
+
                 }
             }
             else {
                 host.Run();
             }
         }
+
         return 0;
     }
     public static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder => {
                 webBuilder.UseStartup<Startup>();
+
             });
     XafApplication IDesignTimeApplicationFactory.Create() {
         IHostBuilder hostBuilder = CreateHostBuilder(Array.Empty<string>());
+
         return DesignTimeApplicationFactoryHelper.Create(hostBuilder);
     }
 }

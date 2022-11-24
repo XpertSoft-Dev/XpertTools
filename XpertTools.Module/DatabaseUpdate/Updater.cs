@@ -10,6 +10,7 @@ using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
 using XpertTools.Module.BusinessObjects;
+using Bogus;
 
 namespace XpertTools.Module.DatabaseUpdate;
 
@@ -62,7 +63,6 @@ public class Updater : ModuleUpdater {
         adminRole.IsAdministrative = true;
 		userAdmin.Roles.Add(adminRole);
 
-        Create_Lien_Parente();
 
 
 
@@ -70,26 +70,7 @@ public class Updater : ModuleUpdater {
     }
 
 
-    public void Create_Lien_Parente()
-    {
-        DevExpress.Xpo.Session session = ((XPObjectSpace)ObjectSpace).Session;
-
-        int tt = ObjectSpace.GetObjectsCount(typeof(Lien_Parente),null) ;
-        if ( tt == 0)
-        {
-            Lien_Parente LP; 
-            LP = new Lien_Parente(session);
-            LP.Rang_Designation = "Enfant";
-
-            LP = new Lien_Parente(session);
-            LP.Rang_Designation = "Conjoint";
-
-            LP = new Lien_Parente(session);
-            LP.Rang_Designation = "Ascendant";
-            
-        }
-        
-    }
+  
     public override void UpdateDatabaseBeforeUpdateSchema() {
         base.UpdateDatabaseBeforeUpdateSchema();
         //if(CurrentDBVersion < new Version("1.1.0.0") && CurrentDBVersion > new Version("0.0.0.0")) {

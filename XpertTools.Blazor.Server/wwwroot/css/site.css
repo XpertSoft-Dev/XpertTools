@@ -34,3 +34,15 @@ app {
     mask: url(IImageService/Action_Search) !important;
     -webkit-mask: url(IImageService/Action_Search) !important;
 }
+
+.header-logo {
+    width: 88px;
+    height: 18px;
+}
+
+.XpertPDALogo {
+    width: 15%;
+    text-align: center;
+    text-decoration-color: currentColor;
+    text-size-adjust: inherit;
+}

@@ -28,6 +28,8 @@ public class Startup {
         services.AddServerSideBlazor();
         services.AddHttpContextAccessor();
         services.AddScoped<CircuitHandler, CircuitHandlerProxy>();
+        services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
+
         services.AddXaf(Configuration, builder => {
             builder.UseApplication<XpertToolsBlazorApplication>();
             builder.Modules
@@ -56,6 +58,7 @@ public class Startup {
                     if(Configuration.GetConnectionString("ConnectionString") != null) {
                         connectionString = Configuration.GetConnectionString("ConnectionString");
                     }
+
 #if EASYTEST
                     if(Configuration.GetConnectionString("EasyTestConnectionString") != null) {
                         connectionString = Configuration.GetConnectionString("EasyTestConnectionString");
